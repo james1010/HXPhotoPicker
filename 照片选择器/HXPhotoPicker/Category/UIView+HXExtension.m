@@ -388,10 +388,10 @@
 - (UIVisualEffectView *)visualEffectView {
     if (!_visualEffectView) {
         if ([HXPhotoCommon photoCommon].isDark) {
-            UIBlurEffect *blurEffrct =[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+            UIBlurEffect *blurEffrct =[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
             _visualEffectView = [[UIVisualEffectView alloc]initWithEffect:blurEffrct];
         }else {
-            UIBlurEffect *blurEffrct =[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+            UIBlurEffect *blurEffrct =[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
             _visualEffectView = [[UIVisualEffectView alloc]initWithEffect:blurEffrct];
         }
         _visualEffectView.frame = self.bounds;
